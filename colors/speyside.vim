@@ -12,14 +12,17 @@ endif
 "set background = dark
 let colors_name = "speyside"
 
-
-if !exists('g:SpeysideLuminosity')
-  let g:SpeysideLuminosity = 0
+if !exists('g:SpeysideColorDictionary')
+  exe 'runtime' 'START' '/colors/colorDictionary.vim'
+  let s:CoDi = g:SpeysideColorDictionary
 endif
 
-if g:SpeysideLuminosity == 0
-  exe 'source'   '~/.vim/pack/colorschemes/start/speyside/colors/colorDictionary.vim'
-  let s:CoDi = g:SpeysideColorDictionary
+if !exists('g:SpeysideLuminosity')
+  if exists('g:SpeysideDefaultLuminence')
+    let g:SpeysideLuminosity = g:SpeysideDefaultLuminence
+  else
+    let g:SpeysideLuminosity = 2 "sets to NORMAL
+  endif
 endif
 
 " Mode {{{
@@ -251,10 +254,6 @@ exe "hi rubyDefine" s:fg_green1 s:sty_b
 "}}}
 "}}}
 "Colorscheme Functions {{{
-if !exists('g:SpeysideLuminosity')
-  let g:SpeysideLuminosity = 0
-endif
-
 if !exists('*ToggleLuminance')
   function! ToggleLuminance() abort
     call speyside#main#UpdateLuminance()
