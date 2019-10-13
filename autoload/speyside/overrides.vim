@@ -4,9 +4,6 @@
     autocmd!
     call speyside#dictionaries#dark#init()
     colorscheme speyside
-
-    "call <SID>_exectuteOverride(l:speysideOverridesDict)
-
   augroup END
 endfunction
 
