@@ -16,7 +16,7 @@ set the variable `g:SpeysideDefaultLuminence` to values [1-3]
 
 Set a shortcut to call the Speyside plugin.
 ```
-if maparg('<leader>gs', 'n') ==# ''
+if maparg('<leader>gl', 'n') ==# ''
   xmap <leader>gl  <plug>Speyside
   vmap <leader>gl  <plug>Speyside
   nmap <leader>gl  <plug>Speyside
