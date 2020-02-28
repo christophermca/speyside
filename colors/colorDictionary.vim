@@ -1,42 +1,12 @@
-" to easily see index of color
-
-"0: 242,
-"1: 235,
-"2: 247,
-"3: 230,
-"4: 239,
-"5: 244,
-"6: 143,
-"7: 57,
-"8: 107,
-"9: 59,
-"10: 158,
-"11: 20,
-"12: 84,
-"13: 49,
-"14: 121,
-"15: 193,
-"16: 45,
-"17: 87,
-"18: 153,
-"19: 123,
-"20: 19,
-"21: 27,
-"22: 33,
-"23: 214,
-"24: 190,
-"25: 221,
-"26: 227,
-"27: 146,
-"28: 207,
-
-let g:SpeysideColorDictionary = {
-    \'diffColors' : [46, 22, 9, 52, 10],
-    \'colors' : [
-    \242, -1, 247, 230, 239, 244, 143, 57, 107, 59,
-    \158, 20, 84, 49, 121, 193, 45, 87, 153, 123, 19,
-    \27, 33, 214, 190, 221, 227, 146, 207, 81]
-  \}
-
-
+let g:SpeysideColorDictionary = #{diffColors: { 1: 46, 2: 22, 3: 9, 4: 52, 5: 10}}
+let g:SpeysideColorDictionary['colorsObj'] = #{
+      \baseBG: 242,  baseFG: 230,
+      \color1: 81, color2: 247, color3: 230, color4: 239, color5: 244,
+      \color6:143, color7: 57, color8: 107, color9: 59, color10: 158,
+      \color11: 20, color12: 84, color13: 49, color14: 121, color15: 193,
+      \color16: 45, color17: 87, color18: 153, color19: 123, color20: 19,
+      \color21: 27, color22: 33, color23: 214, color24: 190, color25: 221,
+      \color26:227, color27: 146, color28: 207
+      \}
+>>>>>>> 325b061... using colorObj
 " vim: fdm=marker foldlevelstart=0 foldlevel=0
