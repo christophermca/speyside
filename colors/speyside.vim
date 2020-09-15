@@ -118,6 +118,9 @@ exe "let s:bg_ltBlue0 = ' "s:mode."bg=" . get(s:CoDi['colors'], 16) ."'"
 exe "let s:fg_ltBlue1 = ' "s:mode."fg=" . get(s:CoDi['colors'], 17) ."'"
 exe "let s:bg_ltBlue1 = ' "s:mode."bg=" . get(s:CoDi['colors'], 17) ."'"
 
+exe "let s:fg_ltBlue2 = ' "s:mode."fg=" . get(s:CoDi['colors'], 29) ."'"
+exe "let s:bg_ltBlue2 = ' "s:mode."bg=" . get(s:CoDi['colors'], 29) ."'"
+
 exe "let s:fg_ltBlue3 = ' "s:mode."fg=" . get(s:CoDi['colors'], 18) ."'"
 exe "let s:bg_ltBlue3 = ' "s:mode."bg=" . get(s:CoDi['colors'], 18) ."'"
 
@@ -191,6 +194,7 @@ exe "hi Directory"  s:fg_green3 s:sty_b
 exe "hi Conditional"  s:fg_green2 . s:sty_b
 exe "hi MatchParen"  s:fg_warm6 . s:bg_NONE . s:sty_b
 exe "hi Special"  s:fg_ltBlue0
+exe "hi PreProc"  s:fg_ltBlue2
 exe "hi TabLineFill"  s:bg_norm
 "
 "{{{ Folds
