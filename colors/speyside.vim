@@ -20,12 +20,9 @@ if !exists('g:SpeysideLuminosity')
   if exists('g:SpeysideDefaultLuminence')
     let g:SpeysideLuminosity = g:SpeysideDefaultLuminence
     if g:SpeysideLuminosity == 3
-      set background=light
     else
-      set background=dark
     endif
   else
-    set background=dark
     let g:SpeysideLuminosity = 2 "sets to NORMAL
   endif
 endif
