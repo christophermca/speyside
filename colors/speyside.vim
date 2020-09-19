@@ -221,7 +221,7 @@ exe "hi PmenuSel" s:fg_ltBlue1 .s:bg_dkGray
 exe "hi DiffAdd" s:fg_diff_add .s:bg_diff_add .s:sty_n
 exe "hi DiffDelete" s:fg_diff_del .s:bg_diff_del .s:sty_n
 exe "hi DiffChange" s:fg_NONE .s:bg_NONE .s:sty_n
-exe "hi difftext" s:fg_difftxt .s:bg_difftxt .s:sty_u
+exe "hi DiffText" s:fg_difftxt .s:bg_difftxt .s:sty_u
 "}}}
 "{{{Spell
 if has("spell")
