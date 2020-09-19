@@ -8,5 +8,4 @@ let g:SpeysideColorDictionary['colorsObj'] = #{
       \color21: 27, color22: 33, color23: 214, color24: 190, color25: 221,
       \color26:227, color27: 146, color28: 207
       \}
->>>>>>> 325b061... using colorObj
 " vim: fdm=marker foldlevelstart=0 foldlevel=0
