@@ -1,6 +1,6 @@
 " Author: 'Christopher MCA'
 " Site: https:/githubcom/christophermca/speyside
-" Version: 2.1.1
+" Version: 2.1.2
 
 "{{{ Colorscheme Setup
 
@@ -19,9 +19,6 @@ endif
 if !exists('g:SpeysideLuminosity')
   if exists('g:SpeysideDefaultLuminence')
     let g:SpeysideLuminosity = g:SpeysideDefaultLuminence
-    if g:SpeysideLuminosity == 3
-    else
-    endif
   else
     let g:SpeysideLuminosity = 2 "sets to NORMAL
   endif
