@@ -1,6 +1,6 @@
 " Author: 'Christopher MCA'
 " Site: https:/githubcom/christophermca/speyside
-" Version: 2.1.2
+" Version: 2.1.3
 
 "{{{ Colorscheme Setup
 
