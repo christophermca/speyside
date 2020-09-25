@@ -2,11 +2,13 @@ function! speyside#main#UpdateLuminance() abort
 
   let g:SpeysideLuminosity = input("current Luminance: " . g:SpeysideLuminosity . " | Set Lumenince [1-3]: ")
 
+  call <SID>_resetSpeyside()
+
   if g:SpeysideLuminosity == 1
       call speyside#overrides#Dark()
   elseif g:SpeysideLuminosity == 2
-      "default luminence
-      call <SID>_resetSpeyside()
+     " returns default ColorDictionary
+     return
   elseif g:SpeysideLuminosity == 3
       call speyside#overrides#Light()
   else
