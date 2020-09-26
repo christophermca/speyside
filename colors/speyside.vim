@@ -16,7 +16,6 @@ if !exists('g:SpeysideColorDictionary')
   let s:CoDi = g:SpeysideColorDictionary
 endif
 
-
 if !exists('g:SpeysideLuminosity')
   if exists('g:SpeysideDefaultLuminence')
     let g:SpeysideLuminosity = g:SpeysideDefaultLuminence
@@ -54,13 +53,7 @@ endif
   "}}}
 "}}}
 "Color Palette {{{
-" GUI {{{
-"}}}
-"Terminal {{{
-
-  "}}}
-"}}}
-"{{{ Build Color Strings
+"Build Color Strings {{{
 "special {{{
 exe "let s:fg_NONE = ' "s:mode."fg=".s:none ."'"
 exe "let s:bg_NONE = ' "s:mode."bg=".s:none ."'"
@@ -80,16 +73,16 @@ exe "let s:bg_spell_bad = ' "s:mode."bg=". get(s:CoDi['diffColors'][s:mode], 3) 
 exe "let s:fg_spell_cap = ' "s:mode."fg=". get(s:CoDi['diffColors'][s:mode], 0) ."'"
 exe "let s:bg_spell_cap = ' "s:mode."bg=". get(s:CoDi['diffColors'][s:mode], 1) ."'"
 
-exe "let s:bg_spell_local = ' "s:mode."bg=". get(s:CoDi['colorsObj'][s:mode], 11) ."'"
+exe "let s:bg_spell_local = ' "s:mode."bg=". get(s:CoDi['colorsObj'][s:mode], 'color11') ."'"
 
-exe "let s:bg_spell_rare = ' "s:mode."bg=". get(s:CoDi['colorsObj'][s:mode], 24) . "'"
+exe "let s:bg_spell_rare = ' "s:mode."bg=". get(s:CoDi['colorsObj'][s:mode], 'color24') . "'"
 "}}}
 "
 exe "let s:bg_norm = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'baseBG') ."'"
 exe "let s:fg_norm = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'baseFG') ."'"
 
-exe "let s:fg_black = ' "s:mode."fg=black" . "'"
-exe "let s:bg_black = ' "s:mode."bg=black" . "'"
+exe "let s:fg_black = ' "s:mode . "fg=black" . "'"
+exe "let s:bg_black = ' "s:mode . "bg=black" . "'"
 
 exe "let s:fg_white = ' "s:mode . "fg=white" . "'"
 exe "let s:bg_white = ' "s:mode . "bg=white" . "'"
@@ -206,23 +199,23 @@ exe "hi CursorLine" s:bg_color4 . s:sty_n
 exe "hi CursorLineNr" s:fg_color17 .s:bg_dkGray
 "}}}
 "{{{ Pmenu
-exe "hi Pmenu" s:fg_white .s:bg_dkGray . s:sty_n
+exe "hi Pmenu" s:fg_white . s:bg_dkGray . s:sty_n
 exe "hi PmenuThumb" s:bg_norm
 exe "hi PmenuSel" s:fg_color17 .s:bg_dkGray
 "}}}
 "{{{ Diff
-exe "hi DiffAdd" s:fg_diff_add .s:bg_diff_add .s:sty_n
-exe "hi DiffDelete" s:fg_diff_del .s:bg_diff_del .s:sty_n
-exe "hi DiffChange" s:fg_NONE .s:bg_NONE .s:sty_n
-exe "hi difftext" s:fg_difftxt . s:fg_norm. s:sty_u
+exe "hi DiffAdd" s:fg_diff_add . s:bg_diff_add . s:sty_n
+exe "hi DiffDelete" s:fg_diff_del . s:bg_diff_del . s:sty_n
+exe "hi DiffChange" s:fg_NONE . s:bg_NONE . s:sty_n
+exe "hi difftext" s:fg_difftxt . s:fg_norm . s:sty_u
 
 "}}}
 "{{{Spell
 if has("spell")
-  exe "hi spellBad" s:fg_spell_bad .s:bg_spell_bad .s:sty_n
-  exe "hi spellCap" s:fg_spell_cap .s:bg_spell_cap .s:sty_n
-  exe "hi spelllocal" s:fg_NONE .s:bg_spell_local .s:sty_n
-  exe "hi spellRare" s:fg_black .s:bg_spell_rare .s:sty_b
+  exe "hi SpellBad" s:fg_spell_bad .s:bg_spell_bad .s:sty_n
+  exe "hi SpellCap" s:fg_spell_cap .s:bg_spell_cap .s:sty_n
+  exe "hi SpellLocal" s:fg_white .s:bg_spell_local .s:sty_n
+  exe "hi SpellRare" s:fg_black .s:bg_spell_rare .s:sty_u
 endif
 "}}}
 "{{{ Statement
@@ -237,7 +230,7 @@ exe "hi Function" s:fg_color12 s:sty_b
 "}}}
 "{{{ Constant
 exe "hi Constant" s:fg_color12
-exe "hi String" s:fg_color19 . s:b
+exe "hi String" s:fg_color19 .s:sty_b
 "}}}
 "{{{ Messaging
 exe "hi Todo" s:fg_color25 .s:bg_color7 .s:sty_b

@@ -1,9 +1,8 @@
 let g:SpeysideColorDictionary = #{
       \diffColors: {'cterm': #{}, 'gui': {}},
-      \colorsObj: {'cterm': #{}, 'gui': {}}
-      \}
+      \colorsObj: {'cterm': #{}, 'gui': {}}}
 
-let g:SpeysideColorDictionary['diffColors']['cterm'] = #{ 1: 46, 2: 22, 3: 9, 4: 52, 5: 10}
+let g:SpeysideColorDictionary['diffColors']['cterm'] = #{0: 0, 1: 46, 2: 22, 3: 9, 4: 52, 5: 10}
 let g:SpeysideColorDictionary['colorsObj']['cterm'] = #{
       \baseBG: 242,  baseFG: 230,
       \color1: 81, color2: 247, color3: 230, color4: 239, color5: 244,
@@ -15,8 +14,9 @@ let g:SpeysideColorDictionary['colorsObj']['cterm'] = #{
       \}
 
 let g:SpeysideColorDictionary['diffColors']['gui'] = {
-          \'1': '#00ff00', '2': '#005f00', '3': '#ff0000', '4': '#5f0000',
-          \'5': '#00ff00'}
+      \'0': '#000000', '1': '#00ff00', '2': '#005f00',
+      \'3': '#ff0000', '4': '#5f0000','5': '#00ff00'}
+
 let g:SpeysideColorDictionary['colorsObj']['gui'] = {
       \'baseBG': '#6c6c6c', 'baseFG': '#ffffd7',
       \'color1': '#5fd7ff', 'color2': '#9e9e9e', 'color3': '#ffffd7', 'color4': '#4e4e4e', 'color5': '#808080',
