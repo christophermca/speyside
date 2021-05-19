@@ -73,6 +73,7 @@ exe "let s:bg_spell_bad = ' "s:mode."bg=". get(s:CoDi['diffColors'][s:mode], 3) 
 exe "let s:fg_spell_cap = ' "s:mode."fg=". get(s:CoDi['diffColors'][s:mode], 0) ."'"
 exe "let s:bg_spell_cap = ' "s:mode."bg=". get(s:CoDi['diffColors'][s:mode], 1) ."'"
 
+exe "let s:fg_spell_local = ' "s:mode."fg=". get(s:CoDi['colorsObj'][s:mode], 'color17') ."'"
 exe "let s:bg_spell_local = ' "s:mode."bg=". get(s:CoDi['colorsObj'][s:mode], 'color11') ."'"
 
 exe "let s:bg_spell_rare = ' "s:mode."bg=". get(s:CoDi['colorsObj'][s:mode], 'color24') . "'"
@@ -89,6 +90,9 @@ exe "let s:bg_white = ' "s:mode . "bg=white" . "'"
 
 exe "let s:fg_dkGray = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'baseBG') ."'"
 exe "let s:bg_dkGray = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'baseBG') ."'"
+
+exe "let s:fg_color1 = ' "s:mode."fg=". get(s:CoDi['colorsObj'][s:mode], 'color1') ."'"
+exe "let s:bg_color1 = ' "s:mode."bg=". get(s:CoDi['colorsObj'][s:mode], 'color1') ."'"
 
 exe "let s:fg_color2 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color2') ."'"
 exe "let s:bg_color2 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color2') ."'"
@@ -110,9 +114,6 @@ exe "let s:bg_color8 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color
 
 exe "let s:fg_color9 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color9') ."'"
 exe "let s:bg_color9 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color9') ."'"
-
-exe "let s:fg_color1 = ' "s:mode."fg=". get(s:CoDi['colorsObj'][s:mode], 'color1') ."'"
-exe "let s:bg_color1 = ' "s:mode."bg=". get(s:CoDi['colorsObj'][s:mode], 'color1') ."'"
 
 exe "let s:fg_color10 = ' "s:mode."fg=". get(s:CoDi['colorsObj'][s:mode], 'color10') ."'"
 exe "let s:bg_color10 = ' "s:mode."bg=". get(s:CoDi['colorsObj'][s:mode], 'color10') ."'"
@@ -168,6 +169,12 @@ exe "let s:bg_color27 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'colo
 exe "let s:fg_color28 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color28') ."'"
 exe "let s:bg_color28 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color28') ."'"
 
+exe "let s:bg_statusln = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'statusLn_2') ."'"
+exe "let s:fg_statusln = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'statusLn_1') ."'"
+
+exe "let s:fg_color30 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color30') ."'"
+exe "let s:bg_color30 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color30') ."'"
+
 "}}}
 "SET Highlights {{{
 exe "hi Normal"  s:fg_norm . s:bg_norm
@@ -193,6 +200,7 @@ exe "hi Search" s:bg_color24 .s:fg_color20 .s:sty_b
 exe "hi IncSearch" s:bg_color24 .s:fg_color20 .s:sty_b
 "}}}
 "{{{ StatusLine
+exe "hi StatusLine" s:bg_statusln .s:fg_statusln
 exe "hi StatusLineNC" s:fg_dkGray .s:bg_color10 .s:sty_su
 "}}}
 "{{{ Line Number & Cursor
@@ -216,7 +224,7 @@ exe "hi difftext" s:fg_difftxt . s:fg_norm . s:sty_u
 if has("spell")
   exe "hi SpellBad" s:fg_spell_bad .s:bg_spell_bad .s:sty_n
   exe "hi SpellCap" s:fg_spell_cap .s:bg_spell_cap .s:sty_n
-  exe "hi SpellLocal" s:fg_white .s:bg_spell_local .s:sty_n
+  exe "hi SpellLocal" s:fg_spell_local .s:bg_spell_local .s:sty_n
   exe "hi SpellRare" s:fg_black .s:bg_spell_rare .s:sty_u
 endif
 "}}}

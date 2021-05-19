@@ -12,9 +12,9 @@ function! speyside#dictionaries#light#init()
     " cterm
     let l:colorOverrides = #{
           \baseBG: 253, baseFG: 59, color1: 31, color3: 59, color4: 254, color6: 65,
-          \color8: 64, color9: 145, color10: 72, color12: 71, color13: 36, color14: 68,
-          \color15: 66, color16:31, color17: 109, color18:104, color19:67, color24: 136,
-          \color25: 198, color26: 208
+          \color7: 99, color8: 64, color9: 145, color10: 72, color12: 71, color13: 36, color14: 68,
+          \color15: 66, color16:31, color17: 73, color18:104, color19:67, color24: 166,
+          \color25: 214, color26: 172, statusLn_2: 245
           \}
   endif
   call extend(g:SpeysideColorDictionary.colorsObj.cterm, l:colorOverrides)
