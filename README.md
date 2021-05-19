@@ -8,9 +8,9 @@ __in your vimrc__
 
 set the variable `g:SpeysideDefaultLuminence` to values [1-3]
 
-*1: dark*
-*2: medium*
-*3: bright*
+*1: Dark*
+*2: Middle*
+*3: Light*
 
 ### Switching Between Luminance
 
