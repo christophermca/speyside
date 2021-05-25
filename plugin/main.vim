@@ -1,3 +1,4 @@
+"used at load time of speyside
 try
   if exists('g:SpeysideLuminosity')
     if g:SpeysideLuminosity == 1

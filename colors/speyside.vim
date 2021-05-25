@@ -97,6 +97,9 @@ exe "let s:bg_color1 = ' "s:mode."bg=". get(s:CoDi['colorsObj'][s:mode], 'color1
 exe "let s:fg_color2 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color2') ."'"
 exe "let s:bg_color2 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color2') ."'"
 
+exe "let s:fg_color3 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color3') ."'"
+exe "let s:bg_color3 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color3') ."'"
+
 exe "let s:fg_color4 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color4') ."'"
 exe "let s:bg_color4 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color4') ."'"
 
@@ -179,7 +182,7 @@ exe "let s:bg_color30 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'colo
 "SET Highlights {{{
 exe "hi Normal"  s:fg_norm . s:bg_norm
 exe "hi Nontext"  s:fg_color27
-exe "hi Visual"  s:fg_black . s:bg_color17
+exe "hi Visual"  s:fg_black . s:bg_color3
 exe "hi Type"  s:fg_color18
 exe "hi Number"  s:fg_color24
 exe "hi Boolean"  s:fg_color25
@@ -191,6 +194,7 @@ exe "hi SpecialKey"  s:fg_color4
 exe "hi PreProc"  s:fg_color1
 exe "hi TabLineFill"  s:bg_norm
 exe "hi Tab"  s:fg_black
+exe "hi VertSplit" s:fg_statusln
 "
 "{{{ Folds
 exe "hi Folded" s:bg_dkGray
@@ -255,15 +259,25 @@ exe "hi rubyDefine" s:fg_color12 s:sty_b
 "}}}
 "}}}
 "Colorscheme Functions {{{
+if !exists('*SetLuminance')
+  function! SetLuminance() abort
+    call speyside#main#SetLuminance()
+  endfunction
+endif
+
 if !exists('*ToggleLuminance')
   function! ToggleLuminance() abort
-    call speyside#main#UpdateLuminance()
+    call speyside#main#ToggleLuminance()
   endfunction
 endif
 
 
+if !hasmapto('<Plug>ToggleLuminance')
+  nnoremap <Plug>ToggleLuminance :<C-U>call ToggleLuminance()<CR>
+endif
+
 if !hasmapto('<Plug>Speyside')
-  nnoremap <Plug>Speyside :<C-U>call ToggleLuminance()<CR>
+  nnoremap <Plug>Speyside :<C-U>call SetLuminance()<CR>
 endif
 "}}}
 " vim: fdm=marker foldlevelstart=0 foldlevel=0
