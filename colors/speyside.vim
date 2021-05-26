@@ -190,7 +190,7 @@ exe "hi Directory"  s:fg_color15 s:sty_b
 exe "hi Conditional"  s:fg_color13 . s:sty_b
 exe "hi MatchParen"  s:fg_color28 . s:bg_NONE . s:sty_b
 exe "hi Special"  s:fg_color16
-exe "hi SpecialKey"  s:fg_color4
+exe "hi SpecialKey"  s:fg_color30
 exe "hi PreProc"  s:fg_color1
 exe "hi TabLineFill"  s:bg_norm
 exe "hi Tab"  s:fg_black
