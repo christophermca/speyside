@@ -7,7 +7,8 @@ if has("gui_running")
 else
   " cterm
   let l:colorOverrides = #{
-        \baseBG: 235, baseFG: 230, color6: 151, color9: 236
+        \baseBG: 235, baseFG: 230, color6: 151, color9: 236,
+        \color30: 238
         \}
   call extend(g:SpeysideColorDictionary.colorsObj.cterm, l:colorOverrides)
 endif
