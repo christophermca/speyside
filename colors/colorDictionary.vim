@@ -2,13 +2,13 @@ let g:SpeysideColorDictionary = #{
       \diffColors: {'cterm': #{}, 'gui': {}},
       \colorsObj: {'cterm': #{}, 'gui': {}}}
 
-let g:SpeysideColorDictionary['diffColors']['cterm'] = #{0: 0, 1: 46, 2: 22, 3: 9, 4: 52, 5: 10, 6: 255}
+let g:SpeysideColorDictionary['diffColors']['cterm'] = #{0: 16, 1: 46, 2: 22, 3: 196, 4: 52, 5: 46, 6: 255}
 let g:SpeysideColorDictionary['colorsObj']['cterm'] = #{
       \baseBG: 242,  baseFG: 230,
       \color1: 81, color2: 247, color3: 44, color4: 239, color5: 244,
       \color6: 151, color7: 99, color8: 107, color9: 59, color10: 158,
       \color11: 20, color12: 84, color13: 49, color14: 121, color15: 193,
-      \color16: 45, color17: 44, color18: 153, color19: 123, color20: 19,
+      \color16: 45, color17: 51, color18: 153, color19: 123, color20: 19,
       \color21: 27, color22: 33, color23: 214, color24: 190, color25: 221,
       \color26:227, color27: 146, color28: 207, color30: 244, statusLn_1: 230, statusLn_2: 242
       \}
