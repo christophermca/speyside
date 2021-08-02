@@ -67,6 +67,9 @@ exe "let s:bg_diff_del = ' "s:mode."bg=". get(s:CoDi['diffColors'][s:mode], 3) .
 exe "let s:fg_difftxt = ' "s:mode."fg=". get(s:CoDi['diffColors'][s:mode], 4) ."'"
 exe "let s:bg_difftxt = ' "s:mode."bg=". get(s:CoDi['colorsObj'][s:mode], 4) ."'"
 
+exe "let s:fg_dif_color5 = ' "s:mode."fg=". get(s:CoDi['diffColors'][s:mode], 5) ."'"
+exe "let s:fg_dif_color6 = ' "s:mode."fg=". get(s:CoDi['diffColors'][s:mode], 6) ."'"
+
 exe "let s:fg_spell_bad = ' "s:mode."fg=". get(s:CoDi['diffColors'][s:mode], 2) ."'"
 exe "let s:bg_spell_bad = ' "s:mode."bg=". get(s:CoDi['diffColors'][s:mode], 3) ."'"
 
@@ -172,11 +175,11 @@ exe "let s:bg_color27 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'colo
 exe "let s:fg_color28 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color28') ."'"
 exe "let s:bg_color28 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color28') ."'"
 
-exe "let s:bg_statusln = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'statusLn_2') ."'"
-exe "let s:fg_statusln = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'statusLn_1') ."'"
-
 exe "let s:fg_color30 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color30') ."'"
 exe "let s:bg_color30 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color30') ."'"
+
+exe "let s:bg_statusln = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'statusLn_2') ."'"
+exe "let s:fg_statusln = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'statusLn_1') ."'"
 
 "}}}
 "SET Highlights {{{
@@ -197,11 +200,12 @@ exe "hi Tab"  s:fg_black
 exe "hi VertSplit" s:fg_statusln
 "
 "{{{ Folds
-exe "hi Folded" s:bg_dkGray
+exe "hi Folded" s:fg_color17 s:bg_dkGray
 "}}}
 "{{{ Search
 exe "hi Search" s:bg_color24 .s:fg_color20 .s:sty_b
 exe "hi IncSearch" s:bg_color24 .s:fg_color20 .s:sty_b
+exe "hi ErrorMsg" s:bg_diff_del .s:fg_dif_color6
 "}}}
 "{{{ StatusLine
 exe "hi StatusLine" s:bg_statusln .s:fg_statusln
