@@ -8,7 +8,7 @@ else
   " cterm
   let l:colorOverrides = #{
         \baseBG: 235, baseFG: 230, color6: 151, color9: 236,
-        \color30: 238
+        \color30: 238, statusLn_NC: 234
         \}
   call extend(g:SpeysideColorDictionary.colorsObj.cterm, l:colorOverrides)
 endif
