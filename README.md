@@ -22,6 +22,14 @@ if maparg('<leader>gl', 'n') ==# ''
   nmap <leader>gl  <plug>Speyside
   omap <leader>gl  <plug>Speyside
 endif
-```
+
+if maparg('<leader>gy', 'n') ==# ''
+  xmap <leader>gt  <plug>ToggleLuminance
+  vmap <leader>gt  <plug>ToggleLuminance
+  nmap <leader>gt  <plug>ToggleLuminance
+  omap <leader>gt  <plug>ToggleLuminance
+endif
+"}}}                    ```
+
 # Contributing
 **code style:** https://google.github.io/styleguide/vimscriptguide.xml
