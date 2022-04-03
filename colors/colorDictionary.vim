@@ -10,8 +10,8 @@ let g:SpeysideColorDictionary['colorsObj']['cterm'] = #{
       \color11: 20, color12: 84, color13: 49, color14: 121, color15: 193,
       \color16: 45, color17: 51, color18: 153, color19: 123, color20: 19,
       \color21: 27, color22: 33, color23: 214, color24: 190, color25: 221,
-      \color26:227, color27: 146, color28: 207, color30: 244, statusLn_1: 230,
-      \statusLn_2: 242, statusLn_NC: 241
+      \color26:227, color27: 146, color28: 207, color29: 190, color30: 244,
+      \statusLn_1: 230, statusLn_2: 242, statusLn_NC: 241
       \}
 
 let g:SpeysideColorDictionary['diffColors']['gui'] = {

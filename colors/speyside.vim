@@ -175,6 +175,9 @@ exe "let s:bg_color27 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'colo
 exe "let s:fg_color28 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color28') ."'"
 exe "let s:bg_color28 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color28') ."'"
 
+exe "let s:fg_color29 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color29') ."'"
+exe "let s:bg_color29 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color29') ."'"
+
 exe "let s:fg_color30 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color30') ."'"
 exe "let s:bg_color30 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color30') ."'"
 
@@ -190,7 +193,7 @@ exe "hi Normal"  s:fg_norm . s:bg_norm
 exe "hi Nontext"  s:fg_color27
 exe "hi Visual"  s:fg_black . s:bg_color3
 exe "hi Type"  s:fg_color18
-exe "hi Number"  s:fg_color24
+exe "hi Number"  s:fg_color29
 exe "hi Boolean"  s:fg_color25
 exe "hi Directory"  s:fg_color15 s:sty_b
 exe "hi Conditional"  s:fg_color13 . s:sty_b
@@ -201,6 +204,8 @@ exe "hi PreProc"  s:fg_color1
 exe "hi TabLineFill"  s:bg_norm
 exe "hi Tab"  s:fg_black
 exe "hi VertSplit" s:fg_statusln
+exe "hi MoreMsg" s:fg_color14
+exe "hi Question" s:fg_color14
 "
 "{{{ Folds
 exe "hi Folded" s:fg_color17 s:bg_dkGray
