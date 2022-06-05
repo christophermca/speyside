@@ -1,4 +1,6 @@
-function! speyside#main#ToggleLuminance() abort
+function! speyside#main#CycleLuminance() abort
+
+  call echo 'hi'
   call <SID>_resetSpeyside()
   if exists("g:SpeysideLuminosity")
     if g:SpeysideLuminosity == 3

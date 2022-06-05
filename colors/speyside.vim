@@ -277,15 +277,15 @@ if !exists('*SetLuminance')
   endfunction
 endif
 
-if !exists('*ToggleLuminance')
-  function! ToggleLuminance() abort
-    call speyside#main#ToggleLuminance()
+if !exists('*CycleLuminance')
+  function! CycleLuminance() abort
+    call speyside#main#CycleLuminance()
   endfunction
 endif
 
 
-if !hasmapto('<Plug>ToggleLuminance')
-  nnoremap <Plug>ToggleLuminance :<C-U>call ToggleLuminance()<CR>
+if !hasmapto('<Plug>CycleLuminance')
+  nnoremap <Plug>CycleLuminance :<C-U>call CycleLuminance()<CR>
 endif
 
 if !hasmapto('<Plug>Speyside')
