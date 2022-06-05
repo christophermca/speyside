@@ -1,5 +1,9 @@
-"used at load time of speyside
+"NOTE used at loadtime of speyside plugin
 try
+  """
+  " If SpeysideLumionsity is set then use this value as the default value
+  " for the theme
+  """
   if exists('g:SpeysideLuminosity')
     if g:SpeysideLuminosity == 1
         call speyside#overrides#Dark()
