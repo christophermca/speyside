@@ -270,7 +270,13 @@ exe "hi Comment" s:fg_color6
 exe "hi rubyDefine" s:fg_color12 s:sty_b
 "}}}
 "}}}
+"}}}
 "Colorscheme Functions {{{
+
+"""
+" Private methods
+"
+
 if !exists('*SetLuminance')
   function! SetLuminance() abort
     call speyside#main#SetLuminance()
@@ -283,7 +289,9 @@ if !exists('*CycleLuminance')
   endfunction
 endif
 
-
+"""
+" Public methods used in other vim config files. eg vimrc
+"
 if !hasmapto('<Plug>CycleLuminance')
   nnoremap <Plug>CycleLuminance :<C-U>call CycleLuminance()<CR>
 endif

@@ -1,6 +1,4 @@
 function! speyside#main#CycleLuminance() abort
-
-  call echo 'hi'
   call <SID>_resetSpeyside()
   if exists("g:SpeysideLuminosity")
     if g:SpeysideLuminosity == 3
@@ -10,6 +8,7 @@ function! speyside#main#CycleLuminance() abort
     endif
     call <SID>_updateColorDictionary()
   endif
+
 endfunction
 
 function! speyside#main#SetLuminance() abort
