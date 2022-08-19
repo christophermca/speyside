@@ -289,9 +289,19 @@ if !exists('*CycleLuminance')
   endfunction
 endif
 
+if !exists('*ToggleLuminance')
+  function! ToggleLuminance() abort
+    call speyside#main#ToggleLuminance()
+  endfunction
+endif
+
 """
 " Public methods used in other vim config files. eg vimrc
 "
+if !hasmapto('<Plug>ToggleLuminance')
+  nnoremap <Plug>ToggleLuminance :<C-U>call ToggleLuminance()<CR>
+endif
+
 if !hasmapto('<Plug>CycleLuminance')
   nnoremap <Plug>CycleLuminance :<C-U>call CycleLuminance()<CR>
 endif
