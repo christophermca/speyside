@@ -1,3 +1,21 @@
+function! speyside#main#ToggleLuminance() abort
+  " " This won't update in current runnin session
+  " let l:dayNight = $DAY_NIGHT
+
+  " if l:dayNight == 'night'
+  "   call extend(luminance, {'enhance':  1})
+  " else
+  "   call extend(luminance, {'enhance': 3})
+  " endif
+
+  if g:SpeysideLuminosity == get(g:luminance, 'default')
+    let g:SpeysideLuminosity = get(g:luminance, 'enhance')
+  else
+    let g:SpeysideLuminosity = get(g:luminance, 'default')
+  endif
+  call <SID>_updateColorDictionary()
+endfunction
+
 function! speyside#main#CycleLuminance() abort
   call <SID>_resetSpeyside()
   if exists("g:SpeysideLuminosity")
@@ -16,8 +34,8 @@ function! speyside#main#SetLuminance() abort
   let g:SpeysideLuminosity = input("current Luminance: " . g:SpeysideLuminosity . " | Set Lumenince [1-3]: ")
 
   call <SID>_updateColorDictionary()
-
 endfunction
+
 
 function! s:_updateColorDictionary() abort
   if g:SpeysideLuminosity == 1
