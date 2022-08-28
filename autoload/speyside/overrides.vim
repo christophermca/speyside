@@ -1,5 +1,3 @@
-let s:ColorDictionary = g:SpeysideColorDictionary
-
 function! speyside#overrides#Dark() abort
   augroup speysideOverrides
     autocmd!

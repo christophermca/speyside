@@ -27,4 +27,6 @@ let g:SpeysideColorDictionary['colorsObj']['gui'] = {
       \'color21': '#005fff', 'color22': '#0087ff', 'color23': '#ffaf00', 'color24': '#d7ff00', 'color25': '#ffd75f',
       \'color26': '#ffff5f', 'color27': '#afafd7', 'color28': '#ff5fff'}
 
+let g:SpeysideDayNightToggleluminance={'default': 2}
+
 " vim: fdm=marker foldlevelstart=0 foldlevel=0
