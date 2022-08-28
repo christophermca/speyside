@@ -1,17 +1,11 @@
 function! speyside#main#ToggleLuminance() abort
   " " This won't update in current runnin session
-  " let l:dayNight = $DAY_NIGHT
+  call <SID>_initToggleLuminance()
 
-  " if l:dayNight == 'night'
-  "   call extend(luminance, {'enhance':  1})
-  " else
-  "   call extend(luminance, {'enhance': 3})
-  " endif
-
-  if g:SpeysideLuminosity == get(g:luminance, 'default')
-    let g:SpeysideLuminosity = get(g:luminance, 'enhance')
+  if g:SpeysideLuminosity == get(g:SpeysideDayNightToggleluminance, 'default')
+    let g:SpeysideLuminosity = get(g:SpeysideDayNightToggleluminance, 'enhance')
   else
-    let g:SpeysideLuminosity = get(g:luminance, 'default')
+    let g:SpeysideLuminosity = get(g:SpeysideDayNightToggleluminance, 'default')
   endif
   call <SID>_updateColorDictionary()
 endfunction
@@ -50,6 +44,17 @@ function! s:_updateColorDictionary() abort
     echo g:SpeysideLuminosity . " is not is range of available Luminance. Available luminance [1-3]"
     let g:SpeysideLuminosity = g:SpeysideDefaultLuminence
   endif
+endfunction
+
+function s:_initToggleLuminance() abort
+  try
+    let l:current_mode=readfile(expand('$HOME/.config/theme-switcher/mode'), '' , 1)[0]
+      if l:current_mode == 'night'
+        call extend(g:SpeysideDayNightToggleluminance, {'enhance':  1})
+      elseif l:current_mode == 'day'
+        call extend(g:SpeysideDayNightToggleluminance, {'enhance': 3})
+      endif
+  endtry
 endfunction
 
 function! s:_resetSpeyside() abort
