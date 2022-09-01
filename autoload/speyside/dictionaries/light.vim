@@ -16,7 +16,7 @@ function! speyside#dictionaries#light#init()
           \color7: 99, color8: 64, color9: 252, color10: 71, color12: 35, color13: 36,
           \color14: 28, color15: 66, color16:31, color17: 31, color18:62, color19:67,
           \color24: 190, color25: 202, color26: 172, color27: 104, color29: 204, color30: 251,
-          \statusLn_1: 230, statusLn_2: 245, statusLn_NC: 253
+          \statusLn_1: 230, statusLn_2: 245, statusLn_NC: 255, statusLn_NC_2: 71
           \}
   endif
   call extend(g:SpeysideColorDictionary.colorsObj.cterm, l:colorOverrides)
