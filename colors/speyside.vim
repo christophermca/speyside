@@ -184,7 +184,7 @@ exe "let s:bg_color30 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'colo
 exe "let s:bg_statusln = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'statusLn_2') ."'"
 exe "let s:fg_statusln = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'statusLn_1') ."'"
 
-exe "let s:bg_statusln_NC = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'statusLn_NC') ."'"
+exe "let s:bg_statusln_NC = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'statusLn_NC_2') ."'"
 exe "let s:fg_statusln_NC = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'statusLn_NC') ."'"
 
 "}}}
@@ -217,7 +217,7 @@ exe "hi ErrorMsg" s:bg_diff_del .s:fg_dif_color6
 "}}}
 "{{{ StatusLine
 exe "hi StatusLine" s:bg_statusln .s:fg_statusln
-exe "hi StatusLineNC" s:fg_statusln_NC .s:bg_color10 .s:sty_su
+exe "hi StatusLineNC" s:fg_statusln_NC .s:bg_statusln_NC .s:sty_su
 "}}}
 "{{{ Line Number & Cursor
 exe "hi LineNr" s:fg_color9 .s:bg_color8 .s:sty_s
