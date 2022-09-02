@@ -1,13 +1,17 @@
 function! speyside#main#ToggleLuminance() abort
   " " This won't update in current runnin session
-  call <SID>_initToggleLuminance()
+  try
+    call <SID>_initToggleLuminance()
 
-  if g:SpeysideLuminosity == get(g:SpeysideDayNightToggleluminance, 'default')
-    let g:SpeysideLuminosity = get(g:SpeysideDayNightToggleluminance, 'enhance')
-  else
-    let g:SpeysideLuminosity = get(g:SpeysideDayNightToggleluminance, 'default')
-  endif
-  call <SID>_updateColorDictionary()
+    if g:SpeysideLuminosity == get(g:SpeysideDayNightToggleluminance, 'default')
+      let g:SpeysideLuminosity = get(g:SpeysideDayNightToggleluminance, 'enhance')
+    else
+      let g:SpeysideLuminosity = get(g:SpeysideDayNightToggleluminance, 'default')
+    endif
+    call <SID>_updateColorDictionary()
+  catch /^SPEYSIDE/
+  echo "SPEYSIDE - !!ToggleLuminance feature is not available"
+  endtry
 endfunction
 
 function! speyside#main#CycleLuminance() abort
@@ -47,14 +51,16 @@ function! s:_updateColorDictionary() abort
 endfunction
 
 function s:_initToggleLuminance() abort
-  try
-    let l:current_mode=readfile(expand('$HOME/.config/theme-switcher/mode'), '' , 1)[0]
-      if l:current_mode == 'night'
-        call extend(g:SpeysideDayNightToggleluminance, {'enhance':  1})
-      elseif l:current_mode == 'day'
-        call extend(g:SpeysideDayNightToggleluminance, {'enhance': 3})
-      endif
-  endtry
+    let l:SpeysideMode=glob('$HOME/.config/theme-switcher/mode')
+    if strlen(l:SpeysideMode) == 0
+      throw "SPEYSIDE - g:SpeysideMode is not set"
+    endif
+    let l:current_mode=readfile(l:SpeysideMode, '' , 1)[0]
+    if l:current_mode == 'night'
+      call extend(g:SpeysideDayNightToggleluminance, {'enhance':  1})
+    elseif l:current_mode == 'day'
+      call extend(g:SpeysideDayNightToggleluminance, {'enhance': 3})
+    endif
 endfunction
 
 function! s:_resetSpeyside() abort
