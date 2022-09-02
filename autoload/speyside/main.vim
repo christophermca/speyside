@@ -51,7 +51,7 @@ function! s:_updateColorDictionary() abort
 endfunction
 
 function s:_initToggleLuminance() abort
-    let l:SpeysideMode=glob('$HOME/.config/theme-switcher/mode')
+    let l:SpeysideMode=glob(g:SpeysideThemeSwitcherMode)
     if strlen(l:SpeysideMode) == 0
       throw "SPEYSIDE - g:SpeysideMode is not set"
     endif
