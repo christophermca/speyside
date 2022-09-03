@@ -51,16 +51,18 @@ function! s:_updateColorDictionary() abort
 endfunction
 
 function s:_initToggleLuminance() abort
-    let l:SpeysideMode=glob(g:SpeysideThemeSwitcherMode)
-    if strlen(l:SpeysideMode) == 0
+  if exists("g:SpeysideMode")
+    let l:mode=glob(g:SpeysideMode)
+    if strlen(l:mode) == 0
       throw "SPEYSIDE - g:SpeysideMode is not set"
     endif
-    let l:current_mode=readfile(l:SpeysideMode, '' , 1)[0]
+    let l:current_mode=readfile(l:mode, '' , 1)[0]
     if l:current_mode == 'night'
       call extend(g:SpeysideDayNightToggleluminance, {'enhance':  1})
     elseif l:current_mode == 'day'
       call extend(g:SpeysideDayNightToggleluminance, {'enhance': 3})
     endif
+  endif
 endfunction
 
 function! s:_resetSpeyside() abort
