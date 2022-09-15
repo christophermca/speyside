@@ -54,12 +54,12 @@ function s:_initToggleLuminance() abort
   if exists("g:SpeysideMode")
     let l:mode=glob(g:SpeysideMode)
     if strlen(l:mode) == 0
-      throw "SPEYSIDE - g:SpeysideMode is not set"
+      throw "SPEYSIDE - g:SpeysideMode is not set beforehand eg .vimrc"
     endif
     let l:current_mode=readfile(l:mode, '' , 1)[0]
     if l:current_mode == 'night'
       call extend(g:SpeysideDayNightToggleluminance, {'enhance':  1})
-    elseif l:current_mode == 'day'
+    elseif l:current_mode == 'daytime'
       call extend(g:SpeysideDayNightToggleluminance, {'enhance': 3})
     endif
   endif
