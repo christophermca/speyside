@@ -1,5 +1,4 @@
 function! speyside#main#ToggleLuminance() abort
-  " " This won't update in current runnin session
   try
     call <SID>_initToggleLuminance()
 

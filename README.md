@@ -1,12 +1,10 @@
 # speyside
 A Vim Colorscheme
 
-## configuration
+## Configuration
 
-```.vimrc```
 __in your vimrc__
-
-set the variable `g:SpeysideDefaultLuminence` to values [1-3]
+g:SpeysideDefaultLuminence=<value>` to values [1-3]
 
 *1: Dark*
 *2: Middle*
@@ -22,14 +20,26 @@ if maparg('<leader>gl', 'n') ==# ''
   nmap <leader>gl  <plug>Speyside
   omap <leader>gl  <plug>Speyside
 endif
+```
 
+### NEW <BETA> FEATURE ###
+
+# ToggleLuminance
+
+__Requires configuration change__
+
+`set rtp=<path-to-day-night-mode>`
+
+`g:SpeysideMode=<path-to-current-mode>`
+
+```
 if maparg('<leader>gt', 'n') ==# ''
   xmap <leader>gt  <plug>ToggleLuminance
   vmap <leader>gt  <plug>ToggleLuminance
   nmap <leader>gt  <plug>ToggleLuminance
   omap <leader>gt  <plug>ToggleLuminance
 endif
-"}}}                    ```
+```
 
 # Contributing
 **code style:** https://google.github.io/styleguide/vimscriptguide.xml
