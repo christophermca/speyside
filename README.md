@@ -1,5 +1,5 @@
 # speyside
-A Vim Colorscheme
+A Vim 9.0 Colorscheme
 
 ## Configuration
 
