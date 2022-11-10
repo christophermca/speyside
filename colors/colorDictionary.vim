@@ -1,6 +1,6 @@
 let g:SpeysideColorDictionary = #{
-      \diffColors: {'cterm': #{}, 'gui': {}},
-      \colorsObj: {'cterm': #{}, 'gui': {}}}
+      \diffColors: {'cterm': #{}, 'gui': #{}},
+      \colorsObj: {'cterm': #{}, 'gui': #{}}}
 
 let g:SpeysideColorDictionary['diffColors']['cterm'] = #{0: 16, 1: 46, 2: 22, 3: 196, 4: 52, 5: 46, 6: 255}
 let g:SpeysideColorDictionary['colorsObj']['cterm'] = #{
@@ -14,18 +14,21 @@ let g:SpeysideColorDictionary['colorsObj']['cterm'] = #{
       \statusLn_1: 230, statusLn_2: 242, statusLn_NC: 241, statusLn_NC_2:158
       \}
 
-let g:SpeysideColorDictionary['diffColors']['gui'] = {
-      \'0': '#000000', '1': '#00ff00', '2': '#005f00',
-      \'3': '#ff0000', '4': '#5f0000','5': '#00ff00'}
+let g:SpeysideColorDictionary['diffColors']['gui'] = #{
+      \0: '#000000', 1: '#00ff00',
+      \2: '#005f00', 3: '#ff0000', 4: '#5f0000', 5: '#00ff00',
+      \6: '#ffffff'
+      \}
 
-let g:SpeysideColorDictionary['colorsObj']['gui'] = {
-      \'baseBG': '#6c6c6c', 'baseFG': '#ffffd7',
-      \'color1': '#5fd7ff', 'color2': '#9e9e9e', 'color3': '#ffffd7', 'color4': '#4e4e4e', 'color5': '#808080',
-      \'color6': '#afaf5f', 'color7': '#5f00ff', 'color8': '#88af5f', 'color9': '#5f5f5f', 'color10': '#afffd7',
-      \'color11': '#0000d7', 'color12': '#5fff88', 'color13': '#00ffaf', 'color14': '#88ffaf', 'color15': '#d7ffaf',
-      \'color16': '#00d7ff', 'color17': '#5fffff', 'color18': '#afd7ff', 'color19': '#87ffff', 'color20': '#0000af',
-      \'color21': '#005fff', 'color22': '#0087ff', 'color23': '#ffaf00', 'color24': '#d7ff00', 'color25': '#ffd75f',
-      \'color26': '#ffff5f', 'color27': '#afafd7', 'color28': '#ff5fff'}
+let g:SpeysideColorDictionary['colorsObj']['gui'] = #{
+      \baseBG: '#6c6c6c', baseFG: '#ffffd7',
+      \color1: '#5fd7ff', color2: '#9e9e9e', color3: '#ffffd7', color4: '#4e4e4e', color5: '#808080',
+      \color6: '#afaf5f', color7: '#5f00ff', color8: '#88af5f', color9: '#5f5f5f', color10: '#afffd7',
+      \color11: '#0000d7', color12: '#5fff88', color13: '#00ffaf', color14: '#88ffaf', color15: '#d7ffaf',
+      \color16: '#00d7ff', color17: '#5fffff', color18: '#afd7ff', color19: '#87ffff', color20: '#0000af',
+      \color21: '#005fff', color22: '#0087ff', color23: '#ffaf00', color24: '#d7ff00', color25: '#ffd75f',
+      \color26: '#ffff5f', color27: '#afafd7', color28: '#ff5fff', color29:'#dfff00', color30:'#808080',
+      \statusLn_1: '#ffffdf', statusLn_2: '#666666', statusLn_NC: '#606060', statusLn_NC_2:'#afffdf'}
 
 let g:SpeysideDayNightToggleluminance={'default': 2}
 

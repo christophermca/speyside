@@ -65,7 +65,7 @@ exe "let s:fg_diff_del = ' "s:mode."fg=". get(s:CoDi['diffColors'][s:mode], 2) .
 exe "let s:bg_diff_del = ' "s:mode."bg=". get(s:CoDi['diffColors'][s:mode], 3) ."'"
 
 exe "let s:fg_difftxt = ' "s:mode."fg=". get(s:CoDi['diffColors'][s:mode], 4) ."'"
-exe "let s:bg_difftxt = ' "s:mode."bg=". get(s:CoDi['colorsObj'][s:mode], 4) ."'"
+exe "let s:bg_difftxt = ' "s:mode."bg=". get(s:CoDi['colorsObj'][s:mode], 'color4') ."'"
 
 exe "let s:fg_dif_color5 = ' "s:mode."fg=". get(s:CoDi['diffColors'][s:mode], 5) ."'"
 exe "let s:fg_dif_color6 = ' "s:mode."fg=". get(s:CoDi['diffColors'][s:mode], 6) ."'"
