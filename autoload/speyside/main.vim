@@ -1,3 +1,4 @@
+" public
 function! speyside#main#ToggleLuminance() abort
   try
     call <SID>_initToggleLuminance()
@@ -33,7 +34,7 @@ function! speyside#main#SetLuminance() abort
   call <SID>_updateColorDictionary()
 endfunction
 
-
+" private
 function! s:_updateColorDictionary() abort
   if g:SpeysideLuminosity == 1
       call speyside#overrides#Dark()

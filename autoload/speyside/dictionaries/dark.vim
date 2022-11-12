@@ -1,8 +1,10 @@
 function! speyside#dictionaries#dark#init()
 if has("gui_running")
   " gui
-  let l:colorOverrides = {
-        \'baseBG': '#262626', 'baseFG': '#ffffd7', 'color6': '#87875f'}
+  let l:colorOverrides = #{
+        \baseBG: '#262626', baseFG: '#ffffd7', color4: '#1c1c1c', color6: '#87875f', color9: '#303030',
+        color30:'#444444' ,statusLn_NC: '#1c1c1c'
+        \}
   call extend(g:SpeysideColorDictionary.colorsObj.gui, l:colorOverrides)
 else
   " cterm
