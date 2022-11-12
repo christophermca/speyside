@@ -1,12 +1,12 @@
 function! speyside#dictionaries#light#init()
   if has("gui_running")
     " gui
-    let l:colorOverrides = {'baseBG': '#dadada', 'baseFG': '#5f5f5f',
-          \'color1': '#0087d7', 'color3': '#5f5f5f', 'color4': '#e4e4e4',
-          \'color6': '#87875f', 'color10': '#5faf87', 'color12': '#00af00',
-          \'color13': '#00af87', 'color14': '#5f87d7', 'color16': '#0087af',
-          \'color17': '#00afd7', 'color18': '#8787d7', 'color19': '#0087d7',
-          \'color24': '#af8700', 'color25': '#ff0087', 'color26': '#d7875f'}
+    let l:colorOverrides = {
+          \baseBG: '#dadada', baseFG: '#5f5f5f', color1: '#0087d7', color3: '#5f5f5f', color4: '#e4e4e4', color6: '#5f8700',
+          \color7: '#875fff', color8: '#5f8700', color9: '#d0d0d0', color10: '#5faf5f', color12: '#00af5f', color13: '#00af87',
+          \color14: '#5f87d7', color16: '#0087af', color17: '#00afd7', color18: '#8787d7', color19: '#0087d7',
+          \color24: '#af8700', color25: '#ff0087', color26: '#d7875f', color27: '#8787df', color29,'#ff5f87',  color30:'#c6c6c6',
+          \statusLn_1: '#ffffdf', statusLn_2: '#8a8a8a', statusLn_NC: "#eeeeee", statusLn_NC_2: '#5faf5f'}
     call extend(g:SpeysideColorDictionary.colorsObj.gui, l:colorOverrides)
   else
     " cterm
