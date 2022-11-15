@@ -42,5 +42,11 @@ if maparg('<leader>gt', 'n') ==# ''
 endif
 ```
 
+### what this colorscheme cannot do
+Unless running vim in a GUI version ie Gvim,
+
+The cursor colurm is controlled by the terminal colorscheme.
+
+
 # Contributing
 **code style:** https://google.github.io/styleguide/vimscriptguide.xml

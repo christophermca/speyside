@@ -12,7 +12,7 @@ else
         \baseBG: 235, baseFG: 230, color4: 234, color6: 151, color9: 236,
         \color30: 238, statusLn_NC: 234
         \}
-  call extend(g:SpeysideColorDictionary.colorsObj.cterm, l:colorOverrides)
+  call extend(g:SpeysideColorDictionary.baseColors.cterm, l:colorOverrides)
 endif
 endfunction
 

@@ -19,5 +19,5 @@ function! speyside#dictionaries#light#init()
           \statusLn_1: 230, statusLn_2: 245, statusLn_NC: 255, statusLn_NC_2: 71
           \}
   endif
-  call extend(g:SpeysideColorDictionary.colorsObj.cterm, l:colorOverrides)
+  call extend(g:SpeysideColorDictionary.baseColors.cterm, l:colorOverrides)
 endfunction

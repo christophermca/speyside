@@ -1,4 +1,5 @@
-" init dictionary
+" init colorDirectory
+
 let g:SpeysideColorDictionary = #{
       \diffColors: {'cterm': #{}, 'gui': #{}},
       \colorsObj: {'cterm': #{}, 'gui': #{}}}
@@ -6,7 +7,7 @@ let g:SpeysideColorDictionary = #{
 
 
 let g:SpeysideColorDictionary['diffColors']['cterm'] = #{0: 16, 1: 46, 2: 22, 3: 196, 4: 52, 5: 46, 6: 255}
-let g:SpeysideColorDictionary['colorsObj']['cterm'] = #{
+let g:SpeysideColorDictionary['baseColors']['cterm'] = #{
       \baseBG: 242,  baseFG: 230,
       \color1: 81, color2: 247, color3: 44, color4: 239, color5: 244,
       \color6: 151, color7: 99, color8: 107, color9: 59, color10: 158,
