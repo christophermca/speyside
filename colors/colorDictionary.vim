@@ -1,6 +1,9 @@
+" init dictionary
 let g:SpeysideColorDictionary = #{
       \diffColors: {'cterm': #{}, 'gui': #{}},
       \colorsObj: {'cterm': #{}, 'gui': #{}}}
+
+
 
 let g:SpeysideColorDictionary['diffColors']['cterm'] = #{0: 16, 1: 46, 2: 22, 3: 196, 4: 52, 5: 46, 6: 255}
 let g:SpeysideColorDictionary['colorsObj']['cterm'] = #{
