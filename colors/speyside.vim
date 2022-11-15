@@ -65,7 +65,11 @@ exe "let s:fg_diff_del = ' "s:mode."fg=". get(s:CoDi['diffColors'][s:mode], 2) .
 exe "let s:bg_diff_del = ' "s:mode."bg=". get(s:CoDi['diffColors'][s:mode], 3) ."'"
 
 exe "let s:fg_difftxt = ' "s:mode."fg=". get(s:CoDi['diffColors'][s:mode], 4) ."'"
+<<<<<<< HEAD
 exe "let s:bg_difftxt = ' "s:mode."bg=". get(s:CoDi['colorsObj'][s:mode], 'color4') ."'"
+=======
+exe "let s:bg_difftxt = ' "s:mode."bg=". get(s:CoDi['baseColors'][s:mode], 4) ."'"
+>>>>>>> c591917 (wip)
 
 exe "let s:fg_dif_color5 = ' "s:mode."fg=". get(s:CoDi['diffColors'][s:mode], 5) ."'"
 exe "let s:fg_dif_color6 = ' "s:mode."fg=". get(s:CoDi['diffColors'][s:mode], 6) ."'"
@@ -76,14 +80,14 @@ exe "let s:bg_spell_bad = ' "s:mode."bg=". get(s:CoDi['diffColors'][s:mode], 3) 
 exe "let s:fg_spell_cap = ' "s:mode."fg=". get(s:CoDi['diffColors'][s:mode], 0) ."'"
 exe "let s:bg_spell_cap = ' "s:mode."bg=". get(s:CoDi['diffColors'][s:mode], 1) ."'"
 
-exe "let s:fg_spell_local = ' "s:mode."fg=". get(s:CoDi['colorsObj'][s:mode], 'color17') ."'"
-exe "let s:bg_spell_local = ' "s:mode."bg=". get(s:CoDi['colorsObj'][s:mode], 'color11') ."'"
+exe "let s:fg_spell_local = ' "s:mode."fg=". get(s:CoDi['baseColors'][s:mode], 'color17') ."'"
+exe "let s:bg_spell_local = ' "s:mode."bg=". get(s:CoDi['baseColors'][s:mode], 'color11') ."'"
 
-exe "let s:bg_spell_rare = ' "s:mode."bg=". get(s:CoDi['colorsObj'][s:mode], 'color24') . "'"
+exe "let s:bg_spell_rare = ' "s:mode."bg=". get(s:CoDi['baseColors'][s:mode], 'color24') . "'"
 "}}}
 "
-exe "let s:bg_norm = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'baseBG') ."'"
-exe "let s:fg_norm = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'baseFG') ."'"
+exe "let s:bg_norm = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'baseBG') ."'"
+exe "let s:fg_norm = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'baseFG') ."'"
 
 exe "let s:fg_black = ' "s:mode . "fg=black" . "'"
 exe "let s:bg_black = ' "s:mode . "bg=black" . "'"
@@ -91,101 +95,101 @@ exe "let s:bg_black = ' "s:mode . "bg=black" . "'"
 exe "let s:fg_white = ' "s:mode . "fg=white" . "'"
 exe "let s:bg_white = ' "s:mode . "bg=white" . "'"
 
-exe "let s:fg_dkGray = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'baseBG') ."'"
-exe "let s:bg_dkGray = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'baseBG') ."'"
+exe "let s:fg_dkGray = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'baseBG') ."'"
+exe "let s:bg_dkGray = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'baseBG') ."'"
 
-exe "let s:fg_color1 = ' "s:mode."fg=". get(s:CoDi['colorsObj'][s:mode], 'color1') ."'"
-exe "let s:bg_color1 = ' "s:mode."bg=". get(s:CoDi['colorsObj'][s:mode], 'color1') ."'"
+exe "let s:fg_color1 = ' "s:mode."fg=". get(s:CoDi['baseColors'][s:mode], 'color1') ."'"
+exe "let s:bg_color1 = ' "s:mode."bg=". get(s:CoDi['baseColors'][s:mode], 'color1') ."'"
 
-exe "let s:fg_color2 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color2') ."'"
-exe "let s:bg_color2 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color2') ."'"
+exe "let s:fg_color2 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color2') ."'"
+exe "let s:bg_color2 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color2') ."'"
 
-exe "let s:fg_color3 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color3') ."'"
-exe "let s:bg_color3 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color3') ."'"
+exe "let s:fg_color3 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color3') ."'"
+exe "let s:bg_color3 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color3') ."'"
 
-exe "let s:fg_color4 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color4') ."'"
-exe "let s:bg_color4 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color4') ."'"
+exe "let s:fg_color4 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color4') ."'"
+exe "let s:bg_color4 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color4') ."'"
 
-exe "let s:fg_color5 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color5') ."'"
-exe "let s:bg_color5 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color5') ."'"
+exe "let s:fg_color5 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color5') ."'"
+exe "let s:bg_color5 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color5') ."'"
 
-exe "let s:fg_color6 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color6') ."'"
-exe "let s:bg_color6 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color6') ."'"
+exe "let s:fg_color6 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color6') ."'"
+exe "let s:bg_color6 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color6') ."'"
 
-exe "let s:fg_color7 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color7') ."'"
-exe "let s:bg_color7 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color7') ."'"
+exe "let s:fg_color7 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color7') ."'"
+exe "let s:bg_color7 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color7') ."'"
 
-exe "let s:fg_color8 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color8') ."'"
-exe "let s:bg_color8 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color8') ."'"
+exe "let s:fg_color8 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color8') ."'"
+exe "let s:bg_color8 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color8') ."'"
 
-exe "let s:fg_color9 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color9') ."'"
-exe "let s:bg_color9 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color9') ."'"
+exe "let s:fg_color9 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color9') ."'"
+exe "let s:bg_color9 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color9') ."'"
 
-exe "let s:fg_color10 = ' "s:mode."fg=". get(s:CoDi['colorsObj'][s:mode], 'color10') ."'"
-exe "let s:bg_color10 = ' "s:mode."bg=". get(s:CoDi['colorsObj'][s:mode], 'color10') ."'"
+exe "let s:fg_color10 = ' "s:mode."fg=". get(s:CoDi['baseColors'][s:mode], 'color10') ."'"
+exe "let s:bg_color10 = ' "s:mode."bg=". get(s:CoDi['baseColors'][s:mode], 'color10') ."'"
 
-exe "let s:fg_color12 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color12') ."'"
-exe "let s:bg_color12 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color12') ."'"
+exe "let s:fg_color12 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color12') ."'"
+exe "let s:bg_color12 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color12') ."'"
 
-exe "let s:fg_color13 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color13') ."'"
-exe "let s:bg_color13 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color13') ."'"
+exe "let s:fg_color13 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color13') ."'"
+exe "let s:bg_color13 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color13') ."'"
 
-exe "let s:fg_color14 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color14') ."'"
-exe "let s:bg_color14 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color14') ."'"
+exe "let s:fg_color14 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color14') ."'"
+exe "let s:bg_color14 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color14') ."'"
 
-exe "let s:fg_color15 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color15') ."'"
-exe "let s:bg_color15 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color15') ."'"
+exe "let s:fg_color15 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color15') ."'"
+exe "let s:bg_color15 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color15') ."'"
 
-exe "let s:fg_color16 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color16') ."'"
-exe "let s:bg_color16 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color16') ."'"
+exe "let s:fg_color16 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color16') ."'"
+exe "let s:bg_color16 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color16') ."'"
 
-exe "let s:fg_color17 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color17') ."'"
-exe "let s:bg_color17 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color17') ."'"
+exe "let s:fg_color17 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color17') ."'"
+exe "let s:bg_color17 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color17') ."'"
 
-exe "let s:fg_color18 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color18') ."'"
-exe "let s:bg_color18 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color18') ."'"
+exe "let s:fg_color18 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color18') ."'"
+exe "let s:bg_color18 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color18') ."'"
 
-exe "let s:fg_color19 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color19') ."'"
-exe "let s:bg_color19 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color19') ."'"
+exe "let s:fg_color19 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color19') ."'"
+exe "let s:bg_color19 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color19') ."'"
 
-exe "let s:fg_color20 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color20') ."'"
-exe "let s:bg_color20 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color20') ."'"
+exe "let s:fg_color20 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color20') ."'"
+exe "let s:bg_color20 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color20') ."'"
 
-exe "let s:fg_color21 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color21') ."'"
-exe "let s:bg_color21 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color21') ."'"
+exe "let s:fg_color21 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color21') ."'"
+exe "let s:bg_color21 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color21') ."'"
 
-exe "let s:fg_color22 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color22') ."'"
-exe "let s:bg_color22 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color22') ."'"
+exe "let s:fg_color22 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color22') ."'"
+exe "let s:bg_color22 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color22') ."'"
 
-exe "let s:fg_color23 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color23') ."'"
-exe "let s:bg_color23 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color23')."'"
+exe "let s:fg_color23 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color23') ."'"
+exe "let s:bg_color23 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color23')."'"
 
-exe "let s:fg_color24 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color24') ."'"
-exe "let s:bg_color24 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color24')."'"
+exe "let s:fg_color24 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color24') ."'"
+exe "let s:bg_color24 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color24')."'"
 
-exe "let s:fg_color25 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color25') ."'"
-exe "let s:bg_color25 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color25')."'"
+exe "let s:fg_color25 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color25') ."'"
+exe "let s:bg_color25 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color25')."'"
 
-exe "let s:fg_color26 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color26') ."'"
-exe "let s:bg_color26 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color26') ."'"
+exe "let s:fg_color26 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color26') ."'"
+exe "let s:bg_color26 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color26') ."'"
 
-exe "let s:fg_color27 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color27') ."'"
-exe "let s:bg_color27 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color27') ."'"
+exe "let s:fg_color27 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color27') ."'"
+exe "let s:bg_color27 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color27') ."'"
 
-exe "let s:fg_color28 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color28') ."'"
-exe "let s:bg_color28 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color28') ."'"
+exe "let s:fg_color28 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color28') ."'"
+exe "let s:bg_color28 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color28') ."'"
 
-exe "let s:fg_color29 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color29') ."'"
-exe "let s:bg_color29 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color29') ."'"
+exe "let s:fg_color29 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color29') ."'"
+exe "let s:bg_color29 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color29') ."'"
 
-exe "let s:fg_color30 = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'color30') ."'"
-exe "let s:bg_color30 = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'color30') ."'"
+exe "let s:fg_color30 = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'color30') ."'"
+exe "let s:bg_color30 = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'color30') ."'"
 
-exe "let s:bg_statusln = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'statusLn_2') ."'"
-exe "let s:fg_statusln = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'statusLn_1') ."'"
+exe "let s:bg_statusln = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'statusLn_2') ."'"
+exe "let s:fg_statusln = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'statusLn_1') ."'"
 
-exe "let s:bg_statusln_NC = ' "s:mode."bg=" . get(s:CoDi['colorsObj'][s:mode], 'statusLn_NC_2') ."'"
-exe "let s:fg_statusln_NC = ' "s:mode."fg=" . get(s:CoDi['colorsObj'][s:mode], 'statusLn_NC') ."'"
+exe "let s:bg_statusln_NC = ' "s:mode."bg=" . get(s:CoDi['baseColors'][s:mode], 'statusLn_NC_2') ."'"
+exe "let s:fg_statusln_NC = ' "s:mode."fg=" . get(s:CoDi['baseColors'][s:mode], 'statusLn_NC') ."'"
 
 "}}}
 "SET Highlights {{{
