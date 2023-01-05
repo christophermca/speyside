@@ -12,7 +12,7 @@ endif
 let colors_name = "speyside"
 
 if !exists('g:SpeysideColorDictionary')
-  exe 'runtime' 'START' '/colors/colorDictionary.vim'
+  exe 'runtime' 'START' './autoload/colorDictionary.vim'
   let s:CoDi = g:SpeysideColorDictionary
 endif
 
