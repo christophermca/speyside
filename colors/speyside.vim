@@ -225,9 +225,9 @@ exe "hi CursorLine" s:bg_color4 . s:sty_n
 exe "hi CursorLineNr" s:fg_color17 .s:bg_dkGray
 "}}}
 "{{{ Pmenu
-exe "hi Pmenu" s:fg_white . s:bg_dkGray . s:sty_n
-exe "hi PmenuThumb" s:bg_norm
-exe "hi PmenuSel" s:fg_color17 .s:bg_dkGray
+exe "hi Pmenu" s:bg_norm . s:bg_dkGray . s:sty_r
+exe "hi PmenuThumb" s:bg_norm s:sty_r
+exe "hi PmenuSel" s:fg_color17 .s:bg_dkGray . s:sty_r . s:sty_u
 "}}}
 "{{{ Diff
 exe "hi DiffAdd" s:fg_diff_add . s:bg_diff_add . s:sty_n
@@ -257,6 +257,10 @@ exe "hi Function" s:fg_color12 s:sty_b
 "{{{ Constant
 exe "hi Constant" s:fg_color12
 exe "hi String" s:fg_color19 .s:sty_b
+"}}}
+"{{{ COC
+ hi link CocMenuSel PmenuSel
+
 "}}}
 "{{{ Messaging
 exe "hi Todo" s:fg_color25 .s:bg_color7 .s:sty_b
