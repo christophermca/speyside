@@ -51,10 +51,10 @@ function! s:_updateColorDictionary() abort
 endfunction
 
 function s:_initToggleLuminance() abort
-  if exists("g:SpeysideMode")
-    let l:mode=glob(g:SpeysideMode)
+  if exists("g:PathToSpeysideMode")
+    let l:mode=glob(g:PathToSpeysideMode)
     if strlen(l:mode) == 0
-      throw "SPEYSIDE - g:SpeysideMode is not set beforehand eg .vimrc"
+      throw "SPEYSIDE - g:PathToSpeysideMode is not set beforehand eg .vimrc"
     endif
     let l:current_mode=readfile(l:mode, '' , 1)[0]
     if l:current_mode=~"^night"
