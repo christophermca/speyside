@@ -1,5 +1,6 @@
 # speyside
 A Vim 9.0 Colorscheme
+build with [pollock](https://github.com/christophermca/Pollock)
 
 ## Configuration
 
