@@ -281,6 +281,7 @@ exe "hi rubyDefine" s:fg_color12 s:sty_b
 " Private methods
 "
 
+" Functions can be found in /autoload/speyside/main.vim
 if !exists('*SetLuminance')
   function! SetLuminance() abort
     call speyside#main#SetLuminance()

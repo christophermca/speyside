@@ -24,7 +24,6 @@ function! speyside#main#CycleLuminance() abort
     endif
     call <SID>_updateColorDictionary()
   endif
-
 endfunction
 
 function! speyside#main#SetLuminance() abort
